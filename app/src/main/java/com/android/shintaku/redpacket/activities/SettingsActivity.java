@@ -1,34 +1,21 @@
 package com.android.shintaku.redpacket.activities;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-import org.w3c.dom.Text;
 import com.android.shintaku.redpacket.R;
 import com.android.shintaku.redpacket.fragments.CommentSettingsFragment;
 import com.android.shintaku.redpacket.fragments.GeneralSettingsFragment;
-//import com.android.shintaku.redpacket.utils.UpdateTask;
 
-/**
- * Created by Zhongyi on 1/19/16.
- * Settings page.
- */
 public class SettingsActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

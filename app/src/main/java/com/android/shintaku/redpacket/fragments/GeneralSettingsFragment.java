@@ -7,11 +7,7 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import com.android.shintaku.redpacket.R;
 import com.android.shintaku.redpacket.activities.WebViewActivity;
-//import com.android.shintaku.redpacket.utils.UpdateTask;
 
-/**
- * Created by Zhongyi on 2/4/16.
- */
 public class GeneralSettingsFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,22 +17,26 @@ public class GeneralSettingsFragment extends PreferenceFragment {
     }
 
     private void setPrefListeners() {
-        // Check for updates
-        Preference updatePref = findPreference("pref_etc_check_update");
-        /*updatePref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            public boolean onPreferenceClick(Preference preference) {
-                new UpdateTask(getActivity().getApplicationContext(), true).update();
-                return false;
-            }
-        });*/
-
         // Open issue
         Preference issuePref = findPreference("pref_etc_issue");
         issuePref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
                 Intent webViewIntent = new Intent(getActivity(), WebViewActivity.class);
-                webViewIntent.putExtra("title", "Github Issues");
-                webViewIntent.putExtra("url", getString(R.string.url_github_issues));
+                webViewIntent.putExtra("title", "项目主页");
+                webViewIntent.putExtra("url", "https://github.com/liangzhenduo0608/Red-Packet");
+                webViewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(webViewIntent);
+                return false;
+            }
+        });
+
+        // Update
+        Preference updatePref = findPreference("pref_etc_check_update");
+        updatePref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+                Intent webViewIntent = new Intent(getActivity(), WebViewActivity.class);
+                webViewIntent.putExtra("title", "检查更新");
+                webViewIntent.putExtra("url", "https://github.com/liangzhenduo0608/Red-Packet/releases");
                 webViewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(webViewIntent);
                 return false;

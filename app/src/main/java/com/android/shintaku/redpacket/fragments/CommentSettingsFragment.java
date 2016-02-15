@@ -8,9 +8,6 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 import com.android.shintaku.redpacket.R;
 
-/**
- * Created by Zhongyi on 2/4/16.
- */
 public class CommentSettingsFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {

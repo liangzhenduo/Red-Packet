@@ -16,15 +16,6 @@
             android:textSize="26dp" android:autoText="false"/>
 
     <ImageView
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:id="@+id/imageView2"
-            android:src="@mipmap/ic_settings"
-            android:padding="10dp"
-            android:onClick="openSettings"
-            android:layout_alignRight="@+id/textView" android:layout_below="@+id/main_action_bar_placeholder"
-            android:layout_marginRight="6dp" android:layout_marginTop="6dp"/>
-    <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView" android:src="@mipmap/logo"
@@ -46,7 +37,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="了解更多黑科技,请进入我的主页"
+            android:text="Copyright © 2016 Shintaku"
             android:id="@+id/github" android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true" android:layout_marginBottom="20dp" android:layout_marginTop="20dp"
@@ -55,10 +46,25 @@
             android:id="@+id/button_accessible"
             android:text="@string/service_name"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:onClick="onButtonClicked" android:layout_alignParentBottom="false"
-            android:background="#24e2b379" android:textColor="#c5a45e"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_marginRight="16dp" android:layout_marginLeft="16dp" android:layout_above="@+id/github"
-            android:textSize="20dp"/>
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClicked"
+        android:background="#24e2b379" android:textColor="#c5a45e"
+            style="?android:attr/actionButtonStyle"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:singleLine="false"
+        android:layout_above="@+id/button_accessible0"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+            android:id="@+id/button_accessible0"
+            android:text="@string/preference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openSettings"
+        android:background="#24e2b379" android:textColor="#c5a45e"
+            style="?android:attr/actionButtonStyle"
+        android:textSize="20sp"
+        android:layout_above="@+id/github"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

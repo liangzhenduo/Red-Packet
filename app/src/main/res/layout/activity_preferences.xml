@@ -27,13 +27,6 @@
                 android:clickable="true" android:onClick="performBack"
                 android:layout_alignBottom="@+id/settings_bar"
                 android:src="@mipmap/ic_back"/>
-        <ImageView android:layout_width="40dp" android:layout_height="match_parent" android:id="@+id/imageView3"
-                   android:clickable="true"
-                   android:onClick="enterAccessibilityPage"
-                   android:layout_alignParentRight="true"
-                   android:layout_marginRight="10dp" android:layout_marginLeft="8dp"
-                   android:padding="6dp" android:src="@mipmap/ic_refresh"
-                   android:layout_alignBottom="@+id/settings_bar"/>
     </RelativeLayout>
     <fragment android:layout_width="match_parent"
               android:layout_height="match_parent"

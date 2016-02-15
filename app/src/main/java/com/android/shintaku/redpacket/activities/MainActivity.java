@@ -20,9 +20,6 @@ import java.util.List;
 
 import android.widget.Toast;
 import com.android.shintaku.redpacket.R;
-import com.android.shintaku.redpacket.fragments.GeneralSettingsFragment;
-import com.android.shintaku.redpacket.utils.ConnectivityUtil;
-//import com.android.shintaku.redpacket.utils.UpdateTask;
 
 import com.tencent.bugly.crashreport.CrashReport;
 

@@ -17,12 +17,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import com.android.shintaku.redpacket.utils.HongbaoSignature;
 import com.android.shintaku.redpacket.utils.PowerUtil;
-
 import java.util.List;
-
-import com.android.shintaku.redpacket.utils.HongbaoSignature;
-import com.android.shintaku.redpacket.utils.PowerUtil;
-
 
 public class HongbaoService extends AccessibilityService implements SharedPreferences.OnSharedPreferenceChangeListener {
     private static final String WECHAT_DETAILS_EN = "Details";
