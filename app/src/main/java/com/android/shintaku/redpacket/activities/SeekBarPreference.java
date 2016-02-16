@@ -48,18 +48,18 @@ public class SeekBarPreference extends DialogPreference {
 
         this.textView = (TextView) view.findViewById(R.id.pref_seekbar_textview);
         if (delay == 0) {
-            this.textView.setText("立即" + hintText);
+            this.textView.setText(String.format("立即%s", hintText));
         } else {
-            this.textView.setText("延迟" + delay + "秒" + hintText);
+            this.textView.setText(String.format("延迟%d秒%s", delay, hintText));
         }
 
         this.seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 if (i == 0) {
-                    textView.setText("立即" + hintText);
+                    textView.setText(String.format("立即%s", hintText));
                 } else {
-                    textView.setText("延迟" + i + "秒" + hintText);
+                    textView.setText(String.format("延迟%d秒%s", i, hintText));
                 }
             }
 

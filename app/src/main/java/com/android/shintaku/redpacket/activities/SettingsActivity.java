@@ -3,10 +3,8 @@ package com.android.shintaku.redpacket.activities;
 import android.annotation.TargetApi;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.Window;
@@ -73,9 +71,4 @@ public class SettingsActivity extends FragmentActivity {
         super.onBackPressed();
     }
 
-    public void enterAccessibilityPage(View view) {
-        Intent mAccessibleIntent =
-                new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
-        startActivity(mAccessibleIntent);
-    }
 }

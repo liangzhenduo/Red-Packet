@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
@@ -15,14 +14,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
-
 import java.util.List;
 
 import android.widget.Toast;
 import com.android.shintaku.redpacket.R;
-
 import com.tencent.bugly.crashreport.CrashReport;
-
 
 public class MainActivity extends Activity implements AccessibilityManager.AccessibilityStateChangeListener {
 
@@ -104,13 +100,6 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
         startActivity(webViewIntent);
     }
 
-    public void openGithubReleaseNotes(View view) {
-        Intent webViewIntent = new Intent(this, WebViewActivity.class);
-        webViewIntent.putExtra("title", "发布日志");
-        webViewIntent.putExtra("url", "https://github.com/geeeeeeeeek/WeChatLuckyMoney/issues?q=is%3Aissue+is%3Aopen+label%3A%22release+notes%22");
-        startActivity(webViewIntent);
-    }
-
     public void openSettings(View view) {
         Intent settingsIntent = new Intent(this, SettingsActivity.class);
         settingsIntent.putExtra("title", "偏好设置");
@@ -137,8 +126,6 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
 
     /**
      * 获取 HongbaoService 是否启用状态
-     *
-     * @return
      */
     private boolean isServiceEnabled() {
         List<AccessibilityServiceInfo> accessibilityServices =

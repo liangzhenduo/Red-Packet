@@ -3,6 +3,8 @@ package com.android.shintaku.redpacket.utils;
 import android.graphics.Rect;
 import android.view.accessibility.AccessibilityNodeInfo;
 
+import java.util.Objects;
+
 public class HongbaoSignature {
     public String sender, content, time, contentDescription = "", commentString;
     public boolean others;
@@ -15,7 +17,7 @@ public class HongbaoSignature {
 
             /* The text in the hongbao. Should mean something. */
             String hongbaoContent = hongbaoNode.getChild(0).getText().toString();
-            if (hongbaoContent == null || "查看红包".equals(hongbaoContent)) return false;
+            if ("查看红包".equals(hongbaoContent)) return false;
 
             /* Check the user's exclude words list. */
             String[] excludeWordsArray = excludeWords.split(" +");
@@ -33,7 +35,7 @@ public class HongbaoSignature {
 
             /* The sender and possible timestamp. Should mean something too. */
             String[] hongbaoInfo = getSenderContentDescriptionFromNode(messageNode);
-            if (this.getSignature(hongbaoInfo[0], hongbaoContent, hongbaoInfo[1]).equals(this.toString())) return false;
+            if (Objects.equals(this.toString(), this.getSignature(hongbaoInfo[0], hongbaoContent, hongbaoInfo[1]))) return false;
 
             /* So far we make sure it's a valid new coming hongbao. */
             this.sender = hongbaoInfo[0];
