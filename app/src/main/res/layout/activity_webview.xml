@@ -40,6 +40,6 @@
     <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/webView" android:layout_gravity="center_horizontal" android:foreground="#d84e43"/>
+            android:id="@+id/webView" android:layout_gravity="center_horizontal" android:foreground="#00d84e43"/>
 
 </LinearLayout>

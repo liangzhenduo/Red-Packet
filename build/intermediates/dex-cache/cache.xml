@@ -5,7 +5,7 @@
         jar="/Users/shintaku/Documents/Android/Red-Packet/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="47371445b19bfd4f3e7ba2762014260513e67dd2">
+        sha1="361f25720104be437d09c14b419a78e9e71de186">
         <dex dex="/Users/shintaku/Documents/Android/Red-Packet/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7d871d7f0c882be728f6c913756346a2f4ae10a0/classes.dex" />
     </item>
     <item
@@ -26,7 +26,7 @@
         jar="/Users/shintaku/Documents/Android/Red-Packet/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="84fcd6a5e2d37cf96027f48cae9fabea1c7debe3">
+        sha1="656698de7f969f404cb26f680a316d1472decc1c">
         <dex dex="/Users/shintaku/Documents/Android/Red-Packet/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0885462976f374eda9d722db2a751c6f805361f6/classes.dex" />
     </item>
     <item

@@ -10,7 +10,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -37,7 +36,6 @@ public class WebViewActivity extends Activity {
 
             webView = (WebView) findViewById(R.id.webView);
             webView.getSettings().setBuiltInZoomControls(false);
-            webView.getSettings().setJavaScriptEnabled(true);
             webView.getSettings().setDomStorageEnabled(true);
             webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
             webView.setWebViewClient(new WebViewClient() {
@@ -45,11 +43,6 @@ public class WebViewActivity extends Activity {
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
                     view.loadUrl(url);
                     return false;
-                }
-
-                @Override
-                public void onPageFinished(WebView view, String url) {
-                    CookieSyncManager.getInstance().sync();
                 }
             });
             webView.loadUrl(webViewUrl);
