@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
             Intent accessibleIntent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
             startActivity(accessibleIntent);
         } catch (Exception e) {
-            Toast.makeText(this, "遇到一些问题,请手动打开系统设置>辅助服务>微信红包(ฅ´ω`ฅ)", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "遇到一些问题,请手动打开系统设置>辅助服务>微信红包", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
 
