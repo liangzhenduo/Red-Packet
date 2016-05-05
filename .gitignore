@@ -41,4 +41,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-*.properties
+
+# Properties
+local.properties
+gradle.properties
